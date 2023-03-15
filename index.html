@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://lystv.github.io/short/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+  <title>短链✨𝓛𝔂</title>
+  <link rel="stylesheet" href="https://lystv.github.io/short/styles.css">
+  <style>
+			body{
+				background-size: 100% ;
+			}
+		</style>
+
+
+<body background="" >
+  <div class="card">
+    <h5 class="card-header">短链</h5>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+
+
+     <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">长链</span>
+        </div>
+        <input type="text" class="form-control" placeholder="请输入长链" id="text">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon2">短地址</span>
+        </div>
+        <input type="text" class="form-customs-shorturl" placeholder="请输入短址 为空则随机" id="customShortURL">
+          <span class="input-group-text" id="basic-addon1"><font color="red">注意: 不支持中文字符，可以生成但不能成功跳转到长链！！</font></span>
+        </div>
+      </div>     
+      <div class="input-group mb-3">
+        <button class="btn btn-primary" type="button" onclick='shorturl()' id="searchbtn">点击生成</button>
+      
+      
+      </div>
+ 
+      <div class="card-footer">
+        <span> 
+          <a href="https://runoob.com/" target="_self|_blank">菜鸟教程</a> 
+          <a>&nbsp;&nbsp;</a>
+          <a href="https://肥猫.love/" target="_self|_blank">肥猫不肥</a>
+          <a>&nbsp;&nbsp;</a>
+          <a href="https://blog.sxbai.com/" target="_self|_blank">舒夏博客</a>
+          <a>&nbsp;&nbsp;</a>
+          <a href="https://adzhp.net/" target="_self|_blank">爱达杂货铺</a>
+        </span>
+      </div>  
+      <div class="card-footer">
+        <span>
+         <a href="https://github.com/FongMi/TV" target="_self|_blank">影視*庫</a>
+        <a>&nbsp;&nbsp;</a>
+         <a href="https://github.com/takagen99/Box" target="_self|_blank">TVB-T*庫</a>
+         <a>&nbsp;&nbsp;</a>
+         <a href="https://github.com/q215613905/TVBoxOS" target="_self|_blank">TVB-Q*庫</a>
+         <a>&nbsp;&nbsp;</a>
+         <a href="https://github.com/AndroidSoftwares/box/tree/release/release" target="_self|_blank">521影視*庫</a>
+        </span>
+      </div>  
+         <div class="card-footer">
+         <span>
+         <a href="https://gitcode.net/qq_32394351/dr_py" target="_self|_blank">道長js*蟲庫</a>
+         <a>&nbsp;&nbsp;</a>
+         <a href="https://github.com/lm317379829/PyramidStore" target="_self|_blank">月明py*蟲庫</a>
+         <a>&nbsp;&nbsp;</a>
+         <a href="https://github.com/FongMi/CatVodSpider" target="_self|_blank">蜂蜜*蟲庫</a>
+        </span>
+      </div>                                                                
+   
+       <div class="card-footer">
+        <span>
+<a><font size="3" color="red">
+正式版说明：优先在内测版分支发布，测试修复已知问题后发布到正式版分支并推送更新</font></a><a><font size="2.2" color="orange">
+(优先在微信公众号"肥猫不肥"发布，已安装的点版本号即可更新) 想第一时间体验正式版的下载内测版即可，但正式发布推送正式版后要自行下载(一般是正式版 内测版不一定 自行测试)覆盖安装才能体验更稳定的正式版
+   </font></a><br>                     
+          <h style="font-size:30px;">影视下载</h><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a><a style="font-size:20px;" href="https://lyin.lanzouy.com/b028b822j" target="_blank">其他&共存版</a><a style="font-size:15px;">密碼:888</a><br>
+<h style="font-size:25px;">手機&平板版:</h>
+<a href="https://ghproxy.com/https://github.com/FongMi/TV/raw/release/release/mobile-release.json" target="_blank"><font size="3" color="red">正式版更新詳情</font></a><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a>
+<a href="https://ghproxy.com/https://github.com/FongMi/TV/raw/dev/release/mobile-dev.json" target="_blank"><font size="3" color="red">内测版更新詳情</font></a><br>
+<a style="font-size:25px;" href="https://ghproxy.com/https://raw.githubusercontent.com/FongMi/TV/release/release/mobile-python.apk" target="_blank">Python正式版</a><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a>
+<a style="font-size:25px;" href="https://ghproxy.com/https://raw.githubusercontent.com/FongMi/TV/release/release/mobile-java.apk" target="_blank">Java正式版</a><br>
+      <a style="font-size:25px;" href="https://ghproxy.com/https://raw.githubusercontent.com/FongMi/TV/dev/release/mobile-python.apk" target="_blank">Python內測版</a></font></a><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a>
+<a style="font-size:25px;" href="https://ghproxy.com/https://raw.githubusercontent.com/FongMi/TV/dev/release/mobile-java.apk" target="_blank">Java內測版</a><br>
+
+
+      
+      <h style="font-size:25px;">電視盒子版:</h><br>
+      <h style="font-size:25px;">4.1-4.4系統:</h>
+      <a style="font-size:25px;" href="https://ghproxy.com/https://raw.githubusercontent.com/FongMi/TV/kitkat/release/leanback.apk" target="_blank">Python正式版</a><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a>
+      <a href="https://ghproxy.com/https://github.com/FongMi/TV/raw/kitkat/release/leanback.json" target="_blank"><font size="3" color="red">更新詳情</font></a><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a><br>
+      <h style="font-size:25px;">5.1++系統:</h>
+<a href="https://ghproxy.com/https://github.com/FongMi/TV/raw/release/release/leanback-release.json" target="_blank"><font size="3" color="red">正式版更新詳情</font></a><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a>
+<a href="https://ghproxy.com/https://github.com/FongMi/TV/raw/dev/release/leanback-dev.json"><font size="3" color="red">内测版更新詳情</font></a><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a><br>
+      <a style="font-size:25px;" href="https://ghproxy.com/https://raw.githubusercontent.com/FongMi/TV/release/release/leanback-python.apk" target="_blank">Python正式版</a><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a>
+<a style="font-size:25px;" href="https://ghproxy.com/https://raw.githubusercontent.com/FongMi/TV/release/release/leanback-java.apk" target="_blank">Java正式版</a><br>      
+      <a style="font-size:25px;" href="https://ghproxy.com/https://raw.githubusercontent.com/FongMi/TV/dev/release/leanback-python.apk" target="_blank">Python內測版</a><a style="font-size:25px;">&nbsp;&nbsp;&nbsp;</a>
+<a style="font-size:25px;" href="https://ghproxy.com/https://raw.githubusercontent.com/FongMi/TV/dev/release/leanback-java.apk" target="_blank">Java內測版</a>
+      <br>
+        </span>
+      </div>  
+  
+  <div class="card-footer">
+    <h style="font-size:25px;">接口配置:
+     <a href="https://m-ltv.github.io/T-V/JM/" target="_blank"><font size="3" color="red">编辑器</font></a>
+     <a>&nbsp;&nbsp;</a>
+      <a href="http://ltjm.ml/mao.php?url=" target="_blank"><font size="3" color="red">脫褲</font></a>                              
+    </h>
+    <div class="inner copy-btn" id="cofy" data-clipboard-text="https://tvbox.cainisi.cf">
+    <a style="font-size:20px;" href="https://tvbox.cainisi.cf" target="_blank">彩泥死</a>
+   <span><font size="3" color="red">&nbsp;&nbsp;僅複製</font></span>
+   </div>
+     
+   <div class="inner copy-btn" id="cofy" data-clipboard-text="http://lytv.gq/ts">
+    <a style="font-size:20px;" href="http://lytv.gq/ts" target="_blank">唐三</a>
+   <span><font size="3" color="red">&nbsp;&nbsp;僅複製</font></span>
+   </div>
+    
+  <div class="inner copy-btn" id="cofy" data-clipboard-text="http://我不是.肥猫.love:63/接口禁止贩卖">
+    <a style="font-size:20px;" href="http://我不是.肥猫.love:63/接口禁止贩卖" target="_blank">肥猫</a>
+   <span><font size="3" color="red">&nbsp;&nbsp;僅複製</font></span>
+   </div>
+   
+   <div class="inner copy-btn" id="cofy" data-clipboard-text="http://饭太硬.ga/tv">
+    <a style="font-size:20px;" href="http://饭太硬.ga/tv" target="_blank">饭太硬</a>
+   <span><font size="3" color="red">&nbsp;&nbsp;僅複製</font></span>
+   </div>
+   <div class="inner copy-btn" id="cofy" data-clipboard-text="https://dxawi.github.io/0/0.json">
+    <a style="font-size:20px;" href="https://dxawi.github.io/0/0.json" target="_blank">骚零</a>
+   <span><font size="3" color="red">&nbsp;&nbsp;僅複製</font></span>
+   </div>
+   <div class="inner copy-btn" id="cofy" data-clipboard-text="http://home.jundie.top:81/top98.json">
+    <a style="font-size:20px;" href="http://home.jundie.top:81/top98.json" target="_blank">俊于</a>
+   <span><font size="3" color="red">&nbsp;&nbsp;僅複製</font></span>
+   </div>
+    <div class="inner copy-btn" id="cofy" data-clipboard-text="https://tv.5ye.cc/">
+    <a style="font-size:20px;" href="https://tv.5ye.cc/" target="_blank">二哈</a>
+   <span><font size="3" color="red">&nbsp;&nbsp;僅複製</font></span>
+  </div>                                                            
+</div>
+      <div class="card-footer">
+        <span>
+          <a href="https://blog.lytv.cf/index.php/archives/12.html" target="_self|_blank">本短链搭建教程</a>
+          <a><font color="red">>>></font></a>
+          <a href="http://blog.lytv.cf" target="_self|_blank">𝓛𝔂<font size="1.5" color="orange">不折扣的</font>博客</a>
+          <a>&nbsp;&nbsp;</a><a>第三方:<a>
+          <a href="https://note.cm/" target="_self|_blank">谷歌<a><a>&nbsp;</a>
+          <a href="https://yt.funami.tech/" target="_self|_blank">油管</a>
+        </span>
+      </div>  
+      <div class="card-footer">
+        <span> 
+		   <a></a><br><br><br>
+	    </span>
+      </div>                             
+                                   
+      </div>  
+      <div class="card-text">
+
+        </div>
+        <div class="dibu_footer">
+         <p>
+         <a href="http://xp.lytv.ml/diy/" target="_self|_blank">𝓛𝔂</a>
+         <a>©2023
+         <a href="email://admin@lytv.ga" target="_self|_blank">站长邮箱</a>
+         <br>本服务基于</a>
+         <a href="https://github.com/crazypeace/Url-Shorten-Worker/" target="_self|_blank">crazypeace</a>
+         <a>&nbsp;修改而成</a>
+         </p>
+        </div>
+        
+      </div>
+      </div>
+       
+      <p id="notice"></p>             
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">生成结果为：</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="result">生成失败：</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="已成功复制">复制</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>    
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <!--以下为点击复制调用js-->
+    <script src="https://lystv.github.io/short/dist/jquery.min.js"></script>
+    <script src="https://lystv.github.io/short/dist/clipboard.min.js"></script>
+    <script src="https://lystv.github.io/short/copy.js"></script>                                                                           
+  <!-- 背景音乐代码  开始 -->
+  <script>
+ 		localStorage.setItem('modelId', '2');  
+ 		localStorage.setItem('modelTexturesId', '3');
+ </script>
+<script src="https://api.itggg.cn/live2dnew/right/index.js"> </script>
+<script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" skin="player" au="1" lr="r" m="1"+></script>
+  <!-- 背景音乐代码  结束 -->
+</head>         
+  <script src="https://lystv.github.io/short/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="https://lystv.github.io/short/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://lystv.github.io/short/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+  <script src="https://lystv.github.io/short/main.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
