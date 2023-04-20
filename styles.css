@@ -4,6 +4,8 @@
       cursor: default;
     }
     body {
+      background: url(http://lytv.pp.ua);
+      opacity: 0.8;
       display: -webkit-box;
       display: flex;
       -webkit-box-align: center;
@@ -13,13 +15,17 @@
       vertical-align: center;
       flex-wrap: wrap;
       align-content: center;
-
       color: #2a2b2c;
       background-color: #ebedee;
+      background-size: 100% ;
     }
+    
     .card {
-      background-color: transparent;
-      width: 768px;
+      background-color: rgba(255,255,255,1);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      width: 100%;
     }
     
     .dibu_footer{
