@@ -1,0 +1,39 @@
+<?php
+
+// 获取第一个 JSON 数据
+$json2 = file_get_contents('https://tvhelp.tv73.repl.co/config/t4-4');
+
+// 获取第二个 JSON 数据
+$json1 = file_get_contents('http://81.68.89.191:53124/config/10060/e6492841/0');
+
+// 提取第一个 JSON 的有效内容
+preg_match('/{(.*)}/s', $json1, $matches1);
+$data1 = json_decode($matches1[0], true);
+
+// 提取第二个 JSON 的有效内容
+preg_match('/{(.*)}/s', $json2, $matches2);
+$data2 = json_decode($matches2[0], true);
+
+// 检查解析是否成功
+if ($data1 === null || $data2 === null) {
+    echo "JSON 解析错误";
+    exit;
+}
+// 删除 JSON1 中的  对象
+#unset($data1['ads']);
+#unset($data1['parses']);
+unset($data1['sites']);
+// 合并 JSON 对象，并添加 doh 对象
+$mergedData = $data1;
+$mergedData['sites'] = $data2['sites'];
+#$mergedData['rules'] = $data2['rules'];
+// 转换回 JSON 格式，去掉反斜杠，保留中文字符
+$mergedJson = json_encode($mergedData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+
+// 设置响应头
+header('Content-Type: application/json; charset=utf-8');
+
+// 输出合并结果
+echo $mergedJson;
+
+?>

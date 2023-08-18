@@ -1,0 +1,81 @@
+{  /*https://api.ys66.repl.co?  该链接支持TVB/影视接口解密加密以及(加密)接口合并
+
+https://api.ys66.repl.co/?url=接口外链地址 其他参数参考下列
+$url >>常规接口解密加密，$jm >> -1(默认解密可不填) 1加密(也支持合并接口加密)
+$m >>加密方式：0(默认直转图床可不填)，1(单pk密码) 2(单2423加密) 3(2423+转图片)
+$img >>自定义图片(默认可不填)，$iv >>偏移量(默认可不填)，$key >>秘钥
+
+$sub >>接口合并(支持加密接口，直播点播黑白名单，其他对象添加或修改)
+下列url均是web外链地址即文件直链地址或接口地址 
+自定义该文件(文件名可修改)后，需上传获取直链地址食用(复现接口合并操作)
+https://api.ys66.repl.co/?sub=此文件直链  其他参数参考下列
+$dx >>其他对象修改或添加(参考接口配置内容)  1:是 其他:无(默认0可不填)
+
+删除合并的接口配置中的对象（下列）1:执行 其他:无
+$wp >>壁纸，$ru >>rules广告规则，$as >>ads广告规则
+$ps >>解析，$sp >>爬虫，$dh >>DOH
+$st >>站源，$lv >>直播源
+*/
+    "sub": [
+// 多接口合并json文件sub各键名对应属性（所有对象默认使用第一条）->> 
+// url:接口地址，wsite:站点白名，bsite:站点黑名单，bname:站点名前添加别名，wlive:直播白名单，blive:直播黑名单，
+// jar:多jar模式(1:是，其他:否)，  add：参与合并的站点或直播(1：仅站点，2:站点和直播，3:仅直播)。
+      
+        {
+            "url": "http://xn--sss604efuw.top/tv", 
+            "wsite": ["csp_DuoX"],
+            "bsite": [],
+            "jar": "1",
+            "bname": "",
+            "wlive": [],
+            "blive": [],
+            "add": "1"
+        }, 
+        {
+            "url": "http://xn--sss604efuw.top/tv", 
+            "wsite": ["csp_YGP"],
+            "bsite": [],
+            "jar": "1",
+            "bname": "",
+            "wlive": [],
+            "blive": [],
+            "add": "1"
+        }, 
+        {
+            "url": "http://我不是.肥猫.love:63/接口禁止贩卖", 
+            "wsite": [],
+            "bsite": [],
+            "jar": "",
+            "bname": "",
+            "wlive": [],
+            "blive": [],
+            "add": ""
+        },
+        {
+            "url": "https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json", 
+            "wsite": [],
+            "bsite": [],
+            "jar": "",
+            "bname": "",
+            "wlive": [],
+            "blive": [],
+            "add": ""
+        }
+           ]
+    "files": [
+// 除站点源和直播源的其他对象添加或修改 以最后一条添加为准
+// 只有add为1时 该条才执行
+        {
+            "url": "parses.json外链地址", 
+            "add": ""
+        },
+        {
+            "url": "doh.json外链地址", 
+            "add": ""
+        },
+        {
+            "url": "ads.json外链地址",
+            "add": ""
+        }
+    ]
+}
