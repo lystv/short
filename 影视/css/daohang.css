@@ -1,0 +1,32 @@
+/* 样式用于折叠超过3个导航项 */
+  .hidden-nav-items {
+    display: none;
+  }
+
+  /* 样式用于显示超级导航列表窗口 */
+  #navListContainer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 9999;
+  }
+
+  /* 样式用于导航列表容器 */
+  #navListContainer .container {
+    max-width: 800px;
+  }
+
+  /* 样式用于超级导航列表项 */
+  #navList a {
+    display: block;
+    width: calc(33.33% - 8px);
+    margin: 4px;
+    padding: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }

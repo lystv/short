@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="http://raw.lytv.gq/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+  <title>短链</title>
+  <link rel="stylesheet" href="http://raw.lytv.gq/styles.css">
+  
+
+
+<body background="" >
+  <div class="card">
+    <h5 class="card-header">短链</h5>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+
+
+     <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">长链</span>
+        </div>
+        <input type="text" class="form-control" placeholder="请输入长链" id="text">
+      
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon2">短地址</span>
+        </div>
+        <input type="text" placeholder="请输入短址 为空则随机" id="key">
+        <span class="input-group-text" id="basic-addon1"><font color="red">不支持中文字符</font></span>
+       </div>   
+       <div class="input-group mb-3">
+         <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon2">密码</span>
+         </div>
+        <input type="text" placeholder="请输入密码" id="password">
+	<button class="btn btn-primary" type="submit" onclick='shorturl()' id="searchbtn">点击缩短</button>
+	<span><font color="red">说明: 不填密码或密码错误则随机生成短链 填写正确密码后可自定义短链 多次自定义短链相同 则覆盖修改之前的长链为现在的长链 以最后一次生成为准 </font></span>
+	</div>    
+                
+      </div>
+      </div>
+       
+      <p id="notice"></p>             
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">缩短为：</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="result">失败：</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="已复制">复制</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>    
+        </div>
+      </div>
+    </div>
+  </div>
+  </head>         
+  <script src="http://raw.lytv.gq/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="http://raw.lytv.gq/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="http://raw.lytv.gq/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+  <script src="http://raw.lytv.gq/js/md5.min.js" integrity="sha256-cpbDsuAF6YYKGsywuE65CvzsMKN6x4m6733ZnT3QHHE=" crossorigin="anonymous"></script>
+  <script src="https://ly-img.github.io/short-url/main.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影视TV*正式版</title>
+    <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.6/swiper-bundle.min.css" />
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.6/swiper-bundle.min.js"></script>
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/limonte-sweetalert2/11.4.4/sweetalert2.all.min.js"></script>
+    <link href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/limonte-sweetalert2/11.4.4/sweetalert2.min.css" rel="stylesheet" />
+<!--
+    
+    <link href="http://y.lytv.gq/影视/css/sweetalert2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://y.lytv.gq/影视/css/tailwind.min.css">
+    <link rel="stylesheet" href="http://y.lytv.gq/影视/css/swiper-bundle.min.css" />
+    <script src="http://y.lytv.gq/影视/js/swiper-bundle.min.js"></script>
+    <script src="http://y.lytv.gq/影视/js/sweetalert2.all.min.js"></script>
+    -->
+    <link rel="icon" type="image/png" href="http://y.lytv.gq/影视/img/ys.jpg">
+    <link rel="stylesheet" href="http://y.lytv.gq/影视/css/daohang.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://y.lytv.gq/影视/js/daohang.js"></script>
+    
+</head>
+<body class="bg-gray-200 text-gray-800">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg">
+  <div class="container mx-auto flex justify-between py-4 px-8">
+    <!-- 左边首页链接 -->
+    <a href="/nc/" title="内测版">
+      <img src="http://y.lytv.gq/影视/img/ys.jpg" alt="logo" class="h-6 sm:h-12 lg:h-16">
+    </a>
+
+    <!-- 右边导航 -->
+    <div class="space-x-4" id="navbar">
+      <a href="https://nite07.com" class="text-xl font-bold" target="_blank" title="夜哥博客*分享方便你我他">优质软件</a>
+      <a href="/jm/#jm" class="transition-all duration-150 text-gray-700 hover:text-blue-500" target="_blank" title="黎歌的接口配置解密和𝓛𝔂创建的短链4位随机服务">解密</a>
+      <a href="https://t.me/tvb_ys" class="transition-all duration-150 text-gray-700 hover:text-blue-500" target="_blank" title="𝓛𝔂创建的影视&TVB相关频道">站长频道</a>
+      <a href="/about.html" class="transition-all duration-150 text-gray-700 hover:text-blue-500" target="_blank" title="同步骚零的影视介绍">关于</a>
+      <!-- 更多按钮 -->
+      <button id="moreBtn" class="transition-all duration-150 text-gray-700 hover:text-blue-500">更多</button>
+    </div>
+  </div>
+</nav>
+
+<!-- 超级导航列表窗口 -->
+<div id="navListContainer" class="hidden">
+  <div class="container mx-auto py-4 px-8">
+    <div id="navList" class="flex flex-wrap -mx-4"></div>
+  </div>
+</div>
+
+    <!-- 容器 
+        p_1="https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/Release/main/apk/release/mobile-python-armeabi_v7a.apk"
+        p_2="https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/TV/dev/release/mobile-python-armeabi_v7a.apk"
+        p_3="https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/Release/main/apk/release/leanback-python-armeabi_v7a.apk"
+        p_4="https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/TV/dev/release/leanback-python-armeabi_v7a.apk"
+        p_5="https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/Release/main/apk/kitkat/leanback.apk"
+    -->
+    
+    <div class="container mx-auto mt-8">
+        <div class="flex flex-col md:flex-row">
+            <!-- 左边文字 -->
+            <div class="w-full md:w-1/3 p-8 flex flex-col justify-center">
+                <h2 class="text-center text-4xl font-bold mb-4">影视TV</h2>
+                <p class="text-center">软件永久免费使用</p>
+                <p class="text-center">支持点播视频投屏</p>
+                <p class="text-center"><a href="/rz/#about"><font color="red">更多功能与操作说明及更新日志</font></a></p>
+                
+<div class="grid grid-cols-2 md:grid-cols-2 gap-3 mt-3">
+                        
+                        <a button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/Release/main/apk/release/mobile-python-arm64_v8a.apk" target="_blank" title="64位手机python版">📱py-v8a</a>
+                        
+                        <a button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/Release/main/apk/release/leanback-python-armeabi_v7a.apk" target="_blank" title="32位5.1++电视python版">📺py-v7a</a>
+                    
+                        <a button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/Release/main/apk/kitkat/leanback.apk" target="_blank" title="32位4.1-4.4电视python版">4.1📺py-v7a</a>
+                                              <a button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="/down/" target="_blank" title="更多版本下载">更多</a>
+                </div>
+            </div>
+          <!-- 右边展示图 -->
+    <div class="w-full md:w-2/3 p-8 relative">
+      <div class="swiper-container overflow-hidden">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <img src="https://xhdwc.tk/fm/img/01.webp" alt="Image 3" class="w-full rounded-lg">
+            <div class="carousel-caption">
+              <h3 style="font-size: 17px;">这是首页</h3>
+              <!-- 注释
+              <p>这是一张首页图</p>
+              <a href="./">Learn More</a>
+              -->
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://xhdwc.tk/fm/img/02.webp" alt="Image 2" class="w-full rounded-lg">
+            <div class="carousel-caption">
+              <h3 style="font-size: 17px;">这是点播页</h3>
+              <!-- 注释
+              <p>这是一张首页图</p>
+              <a href="./">Learn More</a>
+              -->
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://xhdwc.tk/fm/img/js.webp" alt="Image 1" class="w-full rounded-lg">
+            <div class="carousel-caption">
+              <h3 style="font-size: 17px;">这是设置页</h3>
+              <!-- 注释
+              <p>这是一张首页图</p>
+              <a href="./">Learn More</a>
+              -->
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination absolute bottom-4 left-1/2 transform -translate-x-1/2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+   
+   <div class="container mx-auto mt-8 bg-white rounded-lg border border-gray-300 p-4">
+        <p>
+        <h2 style="font-size:20px;font-weight: bold;">影视APP简介：
+        </h2>
+        <?php
+            $tvb="https://raw.lytv.gq/影视/ysjs.txt";
+            $text = file_get_contents($tvb); // 读取文本文件的内容
+            $text = nl2br($text); // 将文本中的换行符替换为 <br> 标签
+            echo $text; // 使用 echo 输出带有 <br> 标签的文本内容
+            ?>  
+           <br>
+           <h2 class="text-center" style="font-size:15px;font-weight: bold;">
+           <a>影視導航：>></a><a href="https://t.me/fongmi_release" target="_blank" title="蜂蜜的影视APP与爬虫jar包发布频道" style="font-size:15px;">TG频道</a>            
+                <a>&nbsp;>></a><a href="https://t.me/fongmi_offical" target="_blank" title="蜂蜜的影视APP官方交流群" style="font-size:15px;">TG群</a>
+                <a>&nbsp;>></a><a href="https://github.com/fongmi/tv" target="_blank" title="蜂蜜的影視APP开源仓库" style="font-size:15px;">仓库</a>
+                <a>&nbsp;>></a><a href="/rz/" target="_blank" title="蜂蜜的影視APP更新日志" style="font-size:15px;">更新日誌</a>
+                <a>&nbsp;>></a><a href="/about.html" target="_blank" title="影視更多介紹" style="font-size:15px;">關於</a>
+        </h2>
+            </p>
+    </div>
+   
+        <!-- 接口配置卡片列表 开始-->
+    <div id="jiekou" class="container mx-auto mt-8">
+    <h2 style="font-size:25px;font-weight: bold;">接口配置点击复制</h2>
+        <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-8">
+             <!-- 卡片 1 -->
+             <div data-config="http://饭太硬.top/tv"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">飯總</p>
+            </div>
+            <!-- 卡片 2 -->
+            <div data-config="https://gh.t4tv.hz.cz/newtang.bmp"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">長老</p>
+            </div>
+            <!-- 卡片 3 -->
+            <div data-config="https://xhdwc.tk/0"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">騷零</p>
+            </div>
+            <!-- 卡片 4 -->
+            <div data-config="http://我不是.肥猫.love:63/接口禁止贩卖"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">肥貓</p>
+            </div>
+            <!-- 卡片 5 
+            <div data-config="http://蜂蜜.eu.org"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">蜂蜜(国内1)</p>
+                </div>
+                -->
+            <div data-config="http://蜂蜜.eu.org"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">蜂蜜</p>
+            </div>
+            <!--
+            <div data-config="https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://doy.lytv.gq/img/fm.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">蜂蜜(海外)</p>
+            </div>
+            -->
+            <!-- 卡片 6 -->
+            <div data-config="https://ghproxy.com/raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">月佬</p>
+            </div>
+            <!-- 卡片 7 -->
+            <div data-config="https://ghproxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">高天JS</p>
+            </div>
+            <!-- 卡片 8 -->
+            <div data-config="https://tvbox.cainisi.cf"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">菜尼絲XBPQ</p>
+            </div>
+            <!-- 卡片 9 -->
+            <div data-config="https://ghproxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">高天XYQ</p>
+            </div> 
+            <!-- 卡片 10 -->
+            <div data-config="http://xhww.fun:63/小米/DEMO.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">小米</p>
+            </div>
+            <!-- 卡片 11 -->
+            <div data-config="https://ghproxy.com/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/json/tvbox_config.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">ZHIXC</p>
+            </div>
+            <!-- 卡片 12 -->
+            <div data-config="https://yydsys.top/duo"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">多多</p>
+            </div>
+            <!-- 卡片 13 -->
+            <div data-config="http://pandown.pro/tvbox/tvbox.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">巧技</p>
+            </div>
+            <!-- 卡片 14 -->
+            <div data-config="https://ghproxy.com/https://raw.githubusercontent.com/lystv/short/main/影视/cs.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">MV</p>
+            </div>
+            <!-- 卡片 15 -->
+            <div data-config="https://ghproxy.com/https://raw.githubusercontent.com/2hacc/TVBox/main/xiaoya.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">小雅JS</p>
+            </div>
+            <!-- 卡片 16 -->
+            <div data-config="https://ghproxy.com/https://raw.githubusercontent.com/2hacc/TVBox/main/tvbox.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">二哈</p>
+            </div>
+            <!-- 卡片 17 -->
+            <div data-config="https://ghproxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/9918.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">高天18🈲</p>
+            </div>  
+            <!-- 卡片 18 -->
+            <div data-config="http://大屌蜂蜜.eu.org"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">蜂蜜18🈲</p>
+            </div>
+           <!-- 卡片 19 -->
+            <div data-config="https://ghproxy.com/https://raw.githubusercontent.com/2hacc/TVBox/main/h/h.json"
+                class="hover:bg-gray-200 transition-all duration-150 bg-white shadow rounded-lg p-4 cursor-pointer flex flex-col justify-center items-center">
+                <img class="w-1/3 mx-auto rounded-lg" src="http://y.lytv.gq/影视/img/ys.jpg" alt="Card Image" class="w-full">
+                <p class="text-center mt-2">二哈18🈲</p>
+            </div>
+        </div>
+    </div>
+    <!-- 接口配置卡片列表 结束-->
+
+       
+    
+    <footer id="short" class="mt-8 bg-white text-black p-4 text-center">
+        <p>版权：<a href="https://github.com/fongmi/tv">@fongmi</a></p>
+        <p>页面由 <a href="https://www.nite07.com">Nite07</a> 制作</p>
+    </footer>
+
+</body>
+<!-- 音乐插件 开始-->
+<script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" skin="player" au="1" lr="r" m="1"+></script>
+<!-- 音乐插件 结束-->
+<!-- 复制功能特效 -->
+<script>
+  const cards = document.querySelectorAll('.grid [data-config]');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const configValue = card.getAttribute('data-config');
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(configValue)
+          .then(() => {
+            Swal.fire({
+              icon: 'success',
+              title: '复制成功',
+              showConfirmButton: false,
+              timer: 1000
+            });
+          })
+          .catch(err => {
+            fallbackCopyTextToClipboard(configValue);
+          });
+      } else {
+        fallbackCopyTextToClipboard(configValue);
+      }
+    });
+  });
+
+  function fallbackCopyTextToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    document.body.appendChild(textarea);
+
+    textarea.focus();
+    textarea.select();
+
+    try {
+      const successful = document.execCommand('copy');
+      const msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Fallback: Copying text command was ' + msg);
+      if (successful) {
+        Swal.fire({
+          icon: 'success',
+          title: '复制成功',
+          showConfirmButton: false,
+          timer: 1000
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: '复制失败',
+          showConfirmButton: false,
+          timer: 1000
+        });
+      }
+    } catch (err) {
+      console.error('Fallback: Oops, unable to copy', err);
+      Swal.fire({
+        icon: 'error',
+        title: '复制失败',
+        showConfirmButton: false,
+        timer: 1000
+      });
+    }
+
+    document.body.removeChild(textarea);
+  }
+</script>
+<!-- 图片轮播 -->
+<script src="http://y.lytv.gq/影视/js/img.js"></script>
+</html>
