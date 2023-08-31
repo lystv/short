@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://drowning1213.github.io/xuan.github.io/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+  <title>短链</title>
+  <link rel="stylesheet" href="https://drowning1213.github.io/xuan.github.io/styles.css">
+   <!--音乐播放器所用的文件-->
+<!-- require APlayer -->
+<link rel="stylesheet" href="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://npm.elemecdn.com/meting2@0.0.1/js/Meting.min.js"></script>
+
+
+<body>
+  <div class="card">
+    <h5 class="card-header">短链</h5>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+
+
+     <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">长链</span>
+        </div>
+        <input type="text" class="form-control" placeholder="请输入长链" id="text">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon2">短地址</span>
+        </div>
+        <input type="text" class="form-customs-shorturl" placeholder="请输入短址 为空则随机" id="customShortURL">
+          <span class="input-group-text" id="basic-addon1">注意: 不支持中文字符，可以生成但不能成功跳转到长链！！</span>
+        </div>
+      </div>     
+      <div class="input-group mb-3">
+        <button class="btn btn-primary" type="button" onclick='shorturl()' id="searchbtn">点击生成</button>
+      </div>
+ 
+      <div class="card-footer">
+        <span> <a href="" target="_self"></a> </span>
+      </div>  
+      <div class="card-footer">
+        <span> <a href="https://m-ltv.github.io/T-V/JM/" target="_self"></a> </span>
+      </div>  
+      <div class="card-text">
+      
+        </div>
+      </div>
+      </div>
+       
+      <p id="notice"></p>             
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">生成结果为：</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="result">生成失败：</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="已成功复制">复制</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 背景音乐代码  开始 -->
+ <!--音乐播放器-->
+   <meting-js fixed="true" autoplay="true"  list-folded="true" order="list" lrc-type="1"  auto="https://music.163.com/#/playlist?id=2506700819"></meting-js>
+  <!-- 背景音乐代码  结束 -->
+</head>         
+  <script src="https://drowning1213.github.io/xuan.github.io/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="https://drowning1213.github.io/xuan.github.io/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://drowning1213.github.io/xuan.github.io/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+  <script src="https://drowning1213.github.io/xuan.github.io/main.js" crossorigin="anonymous"></script>
+</body>
+</html>

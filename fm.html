@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="http://raw.lytv.gq/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+  <title>短链</title>
+ <style type="text/css">
+          * {
+      margin: 0;
+      padding: 0;
+      cursor: default;
+    }
+    body {
+	background: black;
+	    adding: 0;
+	    argin: 0;
+	    overflow:hidden
+        
+     
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      vertical-align: center;
+      flex-wrap: wrap;
+      align-content: center;
+      background-size: center ;
+      color: #2a2b2c;
+      background-color: #ebedee;
+    }
+.header{margin: 0 auto;width: 100%;height: 100%;background-color: #000;position: relative;}
+    .card {
+  background-color: rgba(255,255,255,0.5);
+  
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  height: 60%;
+  margin: 0;
+}
+
+    
+    .dibu_footer{
+	height: ;
+	line-height: ;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	background-color: ;
+	color: #fff;
+	font-family: Arial;
+	font-size: 17px;
+	letter-spacing: 2.5px;
+   }
+    .form-control {
+        cursor: auto;
+    }
+    .btn {
+      margin: 0 .375rem 0 0;
+    }
+    .list-group-item {
+      font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+    }
+    @media (max-width: 769px) {
+      .card {
+        width: 80%;
+      }
+    }
+    @media (max-width: 420px) {
+      .card {
+        width: 80%;
+      }
+    }
+    @media (prefers-color-scheme: dark) { 
+      body {
+        color: #d9d9d9; 
+        background: #1b1b1b;
+      }
+      .card {
+        background-color: #252d38;
+      }
+    } 
+    </style>
+ 
+
+
+<body background="" >
+  <div class="card">
+    <h5 class="card-header">短链</h5>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+
+
+     <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">长链</span>
+        </div>
+        <input type="text" class="form-control" placeholder="请输入长链" id="text">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon2">短地址</span>
+        </div>
+        <input type="text" class="form-customs-shorturl" placeholder="请输入短址 为空则随机" id="customShortURL">
+          <span class="input-group-text" id="basic-addon1"><font color="red">注意: 不支持中文字符</font></span>
+        </div>
+      </div>     
+      <div class="input-group mb-3">
+        <button class="btn btn-primary" type="button" onclick='shorturl()' id="searchbtn">点击缩短</button>
+      
+      
+      </div>
+ 
+      <div class="card-footer">
+        <span> 
+          <a href="https://肥猫.love/" target="_self|_blank">肥猫</a>
+          
+        </span>
+      </div> 
+                                   
+                                   
+      </div>  
+      <div class="card-text">
+      
+        </div>
+      </div>
+      </div>
+       
+      <p id="notice"></p>             
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">缩短为：</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="result">失败：</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="已复制">复制</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>    
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="header"><canvas id="canvas"></canvas></div>
+  <script>
+    var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        w = canvas.width = window.innerWidth,
+        h = canvas.height = window.innerHeight,
+        hue = 217,
+        stars = [],
+        count = 0,
+        maxStars = 3000;//星星数量
+    var canvas2 = document.createElement('canvas'),
+        ctx2 = canvas2.getContext('2d');
+    canvas2.width = 100;
+    canvas2.height = 100;
+    var half = canvas2.width / 2,
+        gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+    gradient2.addColorStop(0.025, '#CCC');
+    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+    gradient2.addColorStop(1, 'transparent');
+    ctx2.fillStyle = gradient2;
+    ctx2.beginPath();
+    ctx2.arc(half, half, half, 0, Math.PI * 2);
+    ctx2.fill();
+    // End cache
+    function random(min, max) {
+        if (arguments.length < 2) {
+            max = min;
+            min = 0;
+        }
+        if (min > max) {
+            var hold = max;
+            max = min;
+            min = hold;
+        }
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    function maxOrbit(x, y) {
+        var max = Math.max(x, y),
+            diameter = Math.round(Math.sqrt(max * max + max * max));
+        return diameter / 2;
+//星星移动范围，值越大范围越小，
+    }
+    var Star = function() {
+        this.orbitRadius = random(maxOrbit(w, h));
+        this.radius = random(60, this.orbitRadius) / 8;
+//星星大小
+        this.orbitX = w / 2;
+        this.orbitY = h / 2;
+        this.timePassed = random(0, maxStars);
+        this.speed = random(this.orbitRadius) / 50000;
+//星星移动速度
+        this.alpha = random(2, 10) / 10;
+        count++;
+        stars[count] = this;
+    }
+    Star.prototype.draw = function() {
+        var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+            y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+            twinkle = random(10);
+        if (twinkle === 1 && this.alpha > 0) {
+            this.alpha -= 0.05;
+        } else if (twinkle === 2 && this.alpha < 1) {
+            this.alpha += 0.05;
+        }
+        ctx.globalAlpha = this.alpha;
+        ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+        this.timePassed += this.speed;
+    }
+    for (var i = 0; i < maxStars; i++) {
+        new Star();
+    }
+    function animation() {
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.globalAlpha = 0.5; //尾巴
+        ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
+        ctx.fillRect(0, 0, w, h)
+        ctx.globalCompositeOperation = 'lighter';
+        for (var i = 1, l = stars.length; i < l; i++) {
+            stars[i].draw();
+        };
+        window.requestAnimationFrame(animation);
+    }
+    animation();
+</script>
+</head>
+  
+  <script src="https://cdn.jsdelivr.net/gh/lystv/short@main/xingkong.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="http://raw.lytv.gq/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="http://raw.lytv.gq/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="http://raw.lytv.gq/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+  <script src="http://raw.lytv.gq/main.js" crossorigin="anonymous"></script>
+</body>
+</html>

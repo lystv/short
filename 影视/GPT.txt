@@ -1,0 +1,14 @@
+秘钥 123456
+偏移量 1655051283239
+待解密数据 67eceb6e367cefb7235f721958112488    
+填写密钥和偏移量 不足16位用0补齐 模式CBC 填充方式pkcs 128位 AES转码解密
+
+// 解密算法和填充方式
+$algorithm = "AES-128-CBC";
+$padding = OPENSSL_PKCS1_PADDING;
+
+// 解密数据
+$decrypted_data = openssl_decrypt(base64_decode($encrypted_data), $algorithm, $key, $padding, $offset);
+
+// 输出解密结果
+echo $decrypted_data;
