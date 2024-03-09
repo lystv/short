@@ -1,0 +1,46 @@
+{
+    "sites": [
+        {
+            "key": "manjiu",
+            "name": "猫九",
+            "type": 3,
+            "api": "./bpys_open.js"
+        },
+        {
+            "key": "freeMusic",
+            "name": "音乐",
+            "type": 3,
+            "api": "./freeMusic_open.js"
+        },
+        {
+            "key": "ktv",
+            "name": "k歌",
+            "type": 3,
+            "api": "./ktv_open.js"
+        },
+        {
+            "key": "nangua",
+            "name": "南瓜",
+            "type": 3,
+            "api": "./nangua_open.js"
+        },
+        {
+            "key": "netease_music",
+            "name": "音乐2",
+            "type": 3,
+            "api": "./netease_music_open.js"
+        },
+        {
+            "key": "nongmin",
+            "name": "农民",
+            "type": 3,
+            "api": "./nm_open.js"
+        },
+        {
+            "key": "yinyuetai",
+            "name": "音悦台",
+            "type": 3,
+            "api": "./yinyuetai_open.js"
+        }
+    ]
+}
