@@ -17,3 +17,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/lystv/short/main/影视/tv
 
 #玩偶
 https://ghproxy.net/https://raw.githubusercontent.com/YanG-1989/m3u/main/Adult.m3u
+
+#摔跤
+https://ghproxy.net/https://raw.githubusercontent.com/lystv/short/main/影视/tvb/shuajiao.txt
+
