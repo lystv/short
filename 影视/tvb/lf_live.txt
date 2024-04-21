@@ -10,10 +10,10 @@
 
 
 #16万MV
-https://ghproxy.com/https://raw.githubusercontent.com/lystv/short/main/影视/tvb/MTV.txt
+https://ghproxy.net/https://raw.githubusercontent.com/lystv/short/main/影视/tvb/MTV.txt
 
 #油管直播
-https://ghproxy.com/https://raw.githubusercontent.com/lystv/short/main/影视/tvb/yt.txt
+https://ghproxy.net/https://raw.githubusercontent.com/lystv/short/main/影视/tvb/yt.txt
 
 #玩偶
-https://ghproxy.com/https://raw.githubusercontent.com/YanG-1989/m3u/main/Adult.m3u
+https://ghproxy.net/https://raw.githubusercontent.com/YanG-1989/m3u/main/Adult.m3u
