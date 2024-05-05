@@ -95,7 +95,7 @@ function getSize(bytesLen) {
     
 
     res4 = (
-        await axios.get('https://444.lytv.gq/repos/fongmi/release/contents/apk/release?ref=main')
+        await axios.get('https://444.lytv.gq/repos/fongmi/release/contents/apk/release?ref=fongmi')
     ).data.filter(
         (item) =>
             item.name.endsWith('.apk') &&
@@ -126,7 +126,7 @@ res4.forEach((item) => {
 });
 
    res5 = (
-        await axios.get('https://444.lytv.gq/repos/fongmi/release/contents/apk/dev?ref=main')
+        await axios.get('https://444.lytv.gq/repos/fongmi/release/contents/apk/dev?ref=fongmi')
     ).data.filter(
         (item) =>
             item.name.endsWith('.apk') &&
