@@ -26,21 +26,21 @@ function getSize(bytesLen) {
 		// 添加部分：遍历res1，修改部分文件名并给出下载链接
 	res1.forEach((item) => {
 		if (item.name === 'mobile-python-arm64_v8a.apk') {
-      item.newName = '(OK版)手机正式python-64.apk';
+      item.newName = '(OK版)手机正式py-64.apk';
 		} else if (item.name === 'mobile-java-arm64_v8a.apk') {
       item.newName = '(OK版)手机正式java-64.apk';
         } else if (item.name === 'mobile-python-armeabi_v7a.apk') {
-      item.newName = '(OK版)手机正式python-32.apk';
+      item.newName = '(OK版)手机正式py-32.apk';
         } else if (item.name === 'mobile-java-armeabi_v7a.apk') {
       item.newName = '(OK版)手机正式java-32.apk';
         } else if (item.name === 'leanback-python-arm64_v8a.apk') {
-      item.newName = '(OK版)5.1+TV正式python-64.apk';
+      item.newName = '(OK版)TV正式py-64.apk';
         } else if (item.name === 'leanback-java-arm64_v8a.apk') {
-      item.newName = '(OK版)5.1+TV正式java-64.apk';
+      item.newName = '(OK版)TV正式java-64.apk';
         } else if (item.name === 'leanback-python-armeabi_v7a.apk') {
-      item.newName = '(OK版)5.1+TV正式python-32.apk';
+      item.newName = '(OK版)TV正式py-32.apk';
         } else if (item.name === 'leanback-java-armeabi_v7a.apk') {
-      item.newName = '(OK版)5.1+TV正式java-32.apk';
+      item.newName = '(OK版)TV正式java-32.apk';
 		}
 	});
 
@@ -65,13 +65,13 @@ function getSize(bytesLen) {
         } else if (item.name === 'mobile-java-armeabi_v7a.apk') {
       item.newName = '(OK版)手机内测java-32.apk';
         } else if (item.name === 'leanback-python-arm64_v8a.apk') {
-      item.newName = '(OK版)5.1+TV内测py-64.apk';
+      item.newName = '(OK版)TV内测py-64.apk';
         } else if (item.name === 'leanback-java-arm64_v8a.apk') {
-      item.newName = '(OK版)5.1+TV内测java-64.apk';
+      item.newName = '(OK版)TV内测java-64.apk';
         } else if (item.name === 'leanback-python-armeabi_v7a.apk') {
-      item.newName = '(OK版)5.1+TV内测py-32.apk';
+      item.newName = '(OK版)TV内测py-32.apk';
         } else if (item.name === 'leanback-java-armeabi_v7a.apk') {
-      item.newName = '(OK版)5.1+TV内测java-32.apk';
+      item.newName = '(OK版)TV内测java-32.apk';
 		}
 	});
     
@@ -107,21 +107,21 @@ function getSize(bytesLen) {
     // 添加部分：遍历res1，修改部分文件名并给出下载链接
 res4.forEach((item) => {
     if (item.name === 'mobile-python-arm64_v8a.apk') {
-  item.newName = '(FM版)手机正式python-64.apk';
+  item.newName = '(FM版)手机正式py-64.apk';
     } else if (item.name === 'mobile-java-arm64_v8a.apk') {
   item.newName = '(FM版)手机正式java-64.apk';
     } else if (item.name === 'mobile-python-armeabi_v7a.apk') {
-  item.newName = '(FM版)手机正式python-32.apk';
+  item.newName = '(FM版)手机正式py-32.apk';
     } else if (item.name === 'mobile-java-armeabi_v7a.apk') {
   item.newName = '(FM版)手机正式java-32.apk';
     } else if (item.name === 'leanback-python-arm64_v8a.apk') {
-  item.newName = '(FM版)5.1+TV正式python-64.apk';
+  item.newName = '(FM版)TV正式py-64.apk';
     } else if (item.name === 'leanback-java-arm64_v8a.apk') {
-  item.newName = '(FM版)5.1+TV正式java-64.apk';
+  item.newName = '(FM版)TV正式java-64.apk';
     } else if (item.name === 'leanback-python-armeabi_v7a.apk') {
-  item.newName = '(FM版)5.1+TV正式python-32.apk';
+  item.newName = '(FM版)TV正式py-32.apk';
     } else if (item.name === 'leanback-java-armeabi_v7a.apk') {
-  item.newName = '(FM版)5.1+TV正式java-32.apk';
+  item.newName = '(FM版)TV正式java-32.apk';
     }
 });
 
@@ -146,13 +146,13 @@ res5.forEach((item) => {
     } else if (item.name === 'mobile-java-armeabi_v7a.apk') {
   item.newName = '(FM版)手机内测java-32.apk';
     } else if (item.name === 'leanback-python-arm64_v8a.apk') {
-  item.newName = '(FM版)5.1+TV内测py-64.apk';
+  item.newName = '(FM版)TV内测py-64.apk';
     } else if (item.name === 'leanback-java-arm64_v8a.apk') {
-  item.newName = '(FM版)5.1+TV内测java-64.apk';
+  item.newName = '(FM版)TV内测java-64.apk';
     } else if (item.name === 'leanback-python-armeabi_v7a.apk') {
-  item.newName = '(FM版)5.1+TV内测py-32.apk';
+  item.newName = '(FM版)TV内测py-32.apk';
     } else if (item.name === 'leanback-java-armeabi_v7a.apk') {
-  item.newName = '(FM版)5.1+TV内测java-32.apk';
+  item.newName = '(FM版)TV内测java-32.apk';
     }
 });
 
