@@ -26,22 +26,25 @@ function getSize(bytesLen) {
 		// 添加部分：遍历res1，修改部分文件名并给出下载链接
 	res1.forEach((item) => {
 		if (item.name === 'mobile-python-arm64_v8a.apk') {
-      item.newName = '(OK版)手机正式py-64.apk';
+      item.newName = '手机正式py-64.apk';
 		} else if (item.name === 'mobile-java-arm64_v8a.apk') {
-      item.newName = '(OK版)手机正式java-64.apk';
+      item.newName = '手机正式java-64.apk';
         } else if (item.name === 'mobile-python-armeabi_v7a.apk') {
-      item.newName = '(OK版)手机正式py-32.apk';
+      item.newName = '手机正式py-32.apk';
         } else if (item.name === 'mobile-java-armeabi_v7a.apk') {
-      item.newName = '(OK版)手机正式java-32.apk';
+      item.newName = '手机正式java-32.apk';
         } else if (item.name === 'leanback-python-arm64_v8a.apk') {
-      item.newName = '(OK版)TV正式py-64.apk';
+      item.newName = 'TV正式py-64.apk';
         } else if (item.name === 'leanback-java-arm64_v8a.apk') {
-      item.newName = '(OK版)TV正式java-64.apk';
+      item.newName = 'TV正式java-64.apk';
         } else if (item.name === 'leanback-python-armeabi_v7a.apk') {
-      item.newName = '(OK版)TV正式py-32.apk';
+      item.newName = 'TV正式py-32.apk';
         } else if (item.name === 'leanback-java-armeabi_v7a.apk') {
-      item.newName = '(OK版)TV正式java-32.apk';
-		}
+      item.newName = 'TV正式java-32.apk';
+		} else {
+      item.newName = item.name;
+        }
+      item.newName = '(OK版)' + item.newName;
 	});
 
 	   res2 = (
@@ -57,22 +60,25 @@ function getSize(bytesLen) {
 		// 添加部分：遍历res2，修改部分文件名并给出下载链接
 	res2.forEach((item) => {
 		if (item.name === 'mobile-python-arm64_v8a.apk') {
-      item.newName = '(OK版)手机内测py-64.apk';
+      item.newName = '手机内测py-64.apk';
 		} else if (item.name === 'mobile-java-arm64_v8a.apk') {
-      item.newName = '(OK版)手机内测java-64.apk';
+      item.newName = '手机内测java-64.apk';
         } else if (item.name === 'mobile-python-armeabi_v7a.apk') {
-      item.newName = '(OK版)手机内测py-32.apk';
+      item.newName = '手机内测py-32.apk';
         } else if (item.name === 'mobile-java-armeabi_v7a.apk') {
-      item.newName = '(OK版)手机内测java-32.apk';
+      item.newName = '手机内测java-32.apk';
         } else if (item.name === 'leanback-python-arm64_v8a.apk') {
-      item.newName = '(OK版)TV内测py-64.apk';
+      item.newName = 'TV内测py-64.apk';
         } else if (item.name === 'leanback-java-arm64_v8a.apk') {
-      item.newName = '(OK版)TV内测java-64.apk';
+      item.newName = 'TV内测java-64.apk';
         } else if (item.name === 'leanback-python-armeabi_v7a.apk') {
-      item.newName = '(OK版)TV内测py-32.apk';
+      item.newName = 'TV内测py-32.apk';
         } else if (item.name === 'leanback-java-armeabi_v7a.apk') {
-      item.newName = '(OK版)TV内测java-32.apk';
-		}
+      item.newName = 'TV内测java-32.apk';
+		} else {
+      item.newName = item.name;
+        }
+      item.newName = '(OK版)' + item.newName;
 	});
     
 	
@@ -86,10 +92,11 @@ function getSize(bytesLen) {
          // 添加部分：遍历res3，修改部分文件名并给出下载链接
 	res3.forEach((item) => {
 		if (item.name === 'leanback.apk') {
-      item.newName = '(OK版)4.1+TV.apk';
+      item.newName = '4.1+TV.apk';
 		} else {
 		  item.newName = item.name;
         }
+      item.newName = '(OK版)' + item.newName;
     });		
     
     
